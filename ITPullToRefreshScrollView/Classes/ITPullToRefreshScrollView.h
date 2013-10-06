@@ -7,6 +7,7 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "LNClipView.h"
 
 #ifndef ITPullToRefreshScrollViewConsts
 #define ITPullToRefreshScrollViewConsts
@@ -58,7 +59,7 @@ typedef NS_ENUM(NSUInteger, ITPullToRefreshEdge) {
  *  ITPullToRefreshScrollView is subclass of the NSScrollView class.
  *  It supports refreshing by scrolling.
  */
-@interface ITPullToRefreshScrollView : NSScrollView <NSAnimationDelegate>
+@interface ITPullToRefreshScrollView : LNScrollView <NSAnimationDelegate>
 
 /**
  *  The delegate instance will receive notifications from the scroll view.

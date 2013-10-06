@@ -7,10 +7,11 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "LNClipView.h"
 
 /**
  *  This class is used by `ITPullToRefreshScrollView`.
  *  You don't need to interact with it directly.
  */
-@interface ITPullToRefreshClipView : NSClipView
+@interface ITPullToRefreshClipView : LNClipView
 @end

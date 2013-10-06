@@ -148,9 +148,9 @@
     return kDefaultEdgeViewHeight;
 }
 
-- (void)drawRect:(NSRect)dirtyRect {
-    [self drawBackgroundInRect:dirtyRect];
-}
+//- (void)drawRect:(NSRect)dirtyRect {
+//    [self drawBackgroundInRect:dirtyRect];
+//}
 
 - (void)drawBackgroundInRect:(NSRect)dirtyRect {
     [[NSColor colorWithDeviceWhite:0.96 alpha:1.0] set];
