@@ -12,7 +12,7 @@
 #import "ITPullToRefreshClipView.h"
 #import "DuxScrollViewAnimation.h"
 
-
+void dispatch_sync_on_main(dispatch_block_t block);
 void dispatch_sync_on_main(dispatch_block_t block) {
     if ([NSThread isMainThread]) {
         block();
@@ -204,6 +204,8 @@ void dispatch_sync_on_main(dispatch_block_t block) {
                 _refreshingEdges &= ~edge;
                 
                 [self imitateScrollingEventForEdge:edge];
+                
+                [[self edgeViewForEdge:edge] pullToRefreshScrollViewDidStopAnimating:self];
                 
                 if ([self.delegate respondsToSelector:@selector(pullToRefreshView:didStopRefreshingEdge:)]) {
                     [self.delegate pullToRefreshView:self didStopRefreshingEdge:edge];
